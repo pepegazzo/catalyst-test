@@ -2,126 +2,117 @@ import React from 'react';
 
 const WebflowContent: React.FC = () => {
   return (
-    <div className="page-wrapper">
-      {/* Global styles */}
-      <div className="global-styles">
-        <style>
-          {`
-            /* Make text look crisper and more legible in all browsers */
-            body {
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-              font-smoothing: antialiased;
-              text-rendering: optimizeLegibility;
-            }
-            
-            /* Focus state style for keyboard navigation */
-            *[tabindex]:focus-visible,
-            input[type="file"]:focus-visible {
-              outline: 0.125rem solid #4d65ff;
-              outline-offset: 0.125rem;
-            }
-            
-            /* Set color style to inherit */
-            .inherit-color * {
-              color: inherit;
-            }
-            
-            /* Container alignment */
-            .container-medium,
-            .container-small,
-            .container-large {
-              margin-right: auto !important;
-              margin-left: auto !important;
-            }
-
-            /* Import Webflow styles */
-            @import url('/webflow-assets/css/normalize.css');
-            @import url('/webflow-assets/css/webflow.css');
-            @import url('/webflow-assets/css/catalyststaging.webflow.css');
-          `}
-        </style>
-      </div>
-      
+    <div className="min-h-screen bg-background">
       {/* Main content */}
-      <main className="main-wrapper">
-        <div data-animation="default" className="nav_component w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" id="navbar">
-          <div className="padding-global">
-            <div className="nav_container">
-              <a href="#hero" className="nav_brand w-nav-brand">
-                <img src="/webflow-assets/images/logo_catalyst-mark.svg" loading="lazy" width="99" height="237" alt="" className="catalyst_logomark" />
+      <main className="relative">
+        {/* Navigation */}
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-border">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center justify-between">
+              <a href="#hero" className="flex items-center">
+                <img 
+                  src="/webflow-assets/images/logo_catalyst-mark.svg" 
+                  loading="lazy" 
+                  width="99" 
+                  height="237" 
+                  alt="Catalyst Logo" 
+                  className="h-12 w-auto"
+                />
               </a>
-              <nav role="navigation" className="nav_menu w-nav-menu">
-                <a href="#about" className="nav_menu_link w-nav-link">About</a>
-                <a href="#speakers" className="nav_menu_link w-nav-link">Speakers</a>
-                <a href="#overview" className="nav_menu_link w-nav-link">overview</a>
-                <a href="#participants" className="nav_menu_link w-nav-link">Participants</a>
-                <a href="#toolkit" className="nav_menu_link w-nav-link">RESOURCES</a>
-                <a href="#essentials" className="nav_menu_link w-nav-link">essentials</a>
-                <a href="/agenda" className="nav_menu-cta w-inline-block">
-                  <div className="nav_menu-cta-text">AGENDA</div>
+              <div className="hidden md:flex items-center space-x-8">
+                <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
+                <a href="#speakers" className="text-foreground hover:text-primary transition-colors">Speakers</a>
+                <a href="#overview" className="text-foreground hover:text-primary transition-colors">Overview</a>
+                <a href="#participants" className="text-foreground hover:text-primary transition-colors">Participants</a>
+                <a href="#toolkit" className="text-foreground hover:text-primary transition-colors">Resources</a>
+                <a href="#essentials" className="text-foreground hover:text-primary transition-colors">Essentials</a>
+                <a 
+                  href="/agenda" 
+                  className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  AGENDA
                 </a>
-              </nav>
+              </div>
             </div>
           </div>
-        </div>
+        </nav>
 
-        <section id="hero" className="section_hero">
-          <div className="padding-global padding-section-small is-hero">
-            <div className="container-large">
-              <div className="hero_content">
-                <div className="hero_logo-wrapper">
-                  <img src="/webflow-assets/images/catalyst_primarylogo.svg" loading="lazy" width="430" alt="The primary logo of Catalyst" className="catalyst_primary-logo" />
-                </div>
-                <div className="hero_text">
-                  <h1 className="heading-style-h1 text-color-primary">A Journey of Change in India</h1>
-                  <p className="text-size-medium text-color-primary text-weight-medium">
-                    Catalyst is a journey to India to learn from bold, innovative businesses. We'll explore how they serve a massive middle class with quality and affordability. The goal: bring fresh ideas to lead and create impact where we operate.
-                  </p>
-                </div>
-                <div className="hero_cta-wrapper">
-                  <a href="/agenda" className="hero_cta-button w-inline-block">
-                    <div className="button-primary">
-                      <div className="button_title">explore the agenda</div>
-                      <div className="button_icon-wrapper">
-                        <div className="button_icon-go">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#about" className="hero_secondary-button-link w-inline-block">
-                    <div className="button-secondary">
-                      <div className="button_title">LEARN MORE</div>
-                      <div className="button_icon-wrapper">
-                        <div className="button_icon-down">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M6 9l6 6 6-6"/>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+        {/* Hero Section */}
+        <section id="hero" className="pt-32 pb-16 md:pt-40 md:pb-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="mb-8">
+                <img 
+                  src="/webflow-assets/images/catalyst_primarylogo.svg" 
+                  loading="lazy" 
+                  width="430" 
+                  alt="The primary logo of Catalyst" 
+                  className="mx-auto h-24 md:h-32 w-auto"
+                />
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+                A Journey of Change in India
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Catalyst is a journey to India to learn from bold, innovative businesses. We'll explore how they serve a massive middle class with quality and affordability. The goal: bring fresh ideas to lead and create impact where we operate.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a 
+                  href="/agenda" 
+                  className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  <span>explore the agenda</span>
+                  <svg 
+                    className="ml-2 w-5 h-5" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </a>
+                <a 
+                  href="#about" 
+                  className="inline-flex items-center px-8 py-4 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors"
+                >
+                  <span>LEARN MORE</span>
+                  <svg 
+                    className="ml-2 w-5 h-5" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  >
+                    <path d="M6 9l6 6 6-6"/>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="about" className="section_about is-sand">
-          <div className="padding-global padding-section-medium">
-            <div className="container-medium">
-              <div className="about_content">
-                <div className="section_title-wapper">
-                  <div className="text-size-tag">WHERE CHANGE BEGINS</div>
-                  <h2 className="heading-style-h2 is-color-alternate">a Transformational experience for future-ready leaders</h2>
-                </div>
-                <p className="text-size-regular text-color-alternate">
-                  Welcome to a unique journey designed to shake our thinking, spark inspiration, and strengthen the bonds within our Intercorp community. In India, we'll immerse ourselves in bold ideas, innovative business models, and real-world learning—fueling our culture of continuous growth. Together, we'll return ready to lead change and drive impact back home.
-                </p>
+        {/* About Section */}
+        <section id="about" className="py-16 md:py-24 bg-muted">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-8">
+                <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                  WHERE CHANGE BEGINS
+                </span>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                  A Transformational experience for future-ready leaders
+                </h2>
               </div>
+              <p className="text-lg text-muted-foreground text-center">
+                Welcome to a unique journey designed to shake our thinking, spark inspiration, and strengthen the bonds within our Intercorp community. In India, we'll immerse ourselves in bold ideas, innovative business models, and real-world learning—fueling our culture of continuous growth. Together, we'll return ready to lead change and drive impact back home.
+              </p>
             </div>
           </div>
         </section>
