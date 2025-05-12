@@ -161,6 +161,82 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* Participants Section */}
+        <section id="participants" className="py-16 md:py-24 bg-gradient-to-b from-[#32674D] to-[#194234] text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <span className="inline-block px-4 py-1 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
+                PARTICIPANTS
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                EXECUTIVES ON A MISSION
+              </h2>
+              <p className="text-lg text-white/90">
+                A diverse group of visionary leaders from across all Intercorp platforms—men and women, seasoned voices and fresh perspectives—coming together to explore, learn, and lead transformation.
+              </p>
+            </div>
+            {/* Example participant card grid placeholder */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="bg-white/10 rounded-xl p-6 flex flex-col items-center shadow-lg">
+                <img src="/webflow-assets/images/image.svg" alt="Participant" className="w-24 h-24 rounded-full mb-4 bg-white/20" />
+                <div className="font-bold text-lg">Participant Name</div>
+                <div className="text-sm text-white/80">Company</div>
+                <div className="text-xs text-white/60">Job Title</div>
+              </div>
+              {/* Add more participant cards as needed */}
+            </div>
+          </div>
+        </section>
+
+        {/* Resources Section */}
+        <section id="toolkit" className="py-16 md:py-24 bg-black text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <span className="inline-block px-4 py-1 bg-orange-400/10 text-orange-400 rounded-full text-sm font-medium mb-4">
+                RESOURCES
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                your ultimate toolkit on one drive
+              </h2>
+              <p className="text-lg text-white/90 mb-8">
+                Everything you need—at your fingertips. Find all key documents, guides, and materials neatly organized by stage (before, during, and after the journey) in our already-shared OneDrive folder.
+              </p>
+              <a href="https://interbankpe.sharepoint.com/:f:/s/TeamTalent/EtWn6-38lVFEmhx7-qd7bXABUyrtXdj3LzCTUs92vAXh8Q" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-400 to-yellow-500 text-black font-bold rounded-lg shadow-lg border-2 border-black hover:from-orange-500 hover:to-yellow-400 transition-all duration-300">
+                OPEN resources
+                <svg className="ml-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Essentials Section */}
+        <section id="essentials" className="py-16 md:py-24 bg-[#FCF4DB]">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                ESSENTIALS
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#32674D] mb-4">
+                TRAVEL MUST-KNOWS
+              </h2>
+              <p className="text-lg text-[#32674D] mb-2">
+                From where you're staying to who to call—this section has all the essentials for a smooth and safe journey.
+              </p>
+              <p className="text-lg text-[#32674D] font-bold">
+                Keep it handy or screenshot it to your phone—you'll want this info close at all times.
+              </p>
+            </div>
+            {/* Example hotel card */}
+            <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg flex flex-col md:flex-row items-center p-6 gap-6">
+              <img src="/webflow-assets/images/To-ShortPixel_0000_Bangalore-02.jpg" alt="Hotel" className="w-40 h-28 object-cover rounded-lg" />
+              <div className="flex-1 text-left">
+                <h3 className="text-xl font-bold text-[#32674D] mb-2">Hotel Name</h3>
+                <div className="text-[#32674D]">Address or details go here</div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
