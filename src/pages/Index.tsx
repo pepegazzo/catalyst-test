@@ -28,7 +28,7 @@ const Index = () => {
                 <a href="#essentials" className="text-foreground hover:text-primary transition-colors">Essentials</a>
                 <a 
                   href="/agenda" 
-                  className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-lg hover:from-primary/90 hover:to-primary/70 transition-all duration-300"
                 >
                   AGENDA
                 </a>
@@ -38,7 +38,7 @@ const Index = () => {
         </nav>
 
         {/* Hero Section */}
-        <section id="hero" className="pt-32 pb-16 md:pt-40 md:pb-24">
+        <section id="hero" className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-background to-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8">
@@ -59,7 +59,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a 
                   href="/agenda" 
-                  className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-lg hover:from-primary/90 hover:to-primary/70 transition-all duration-300"
                 >
                   <span>explore the agenda</span>
                   <svg 
@@ -77,7 +77,7 @@ const Index = () => {
                 </a>
                 <a 
                   href="#about" 
-                  className="inline-flex items-center px-8 py-4 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-secondary to-secondary/80 text-secondary-foreground rounded-lg hover:from-secondary/90 hover:to-secondary/70 transition-all duration-300"
                 >
                   <span>LEARN MORE</span>
                   <svg 
@@ -99,18 +99,18 @@ const Index = () => {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-16 md:py-24 bg-muted">
+        <section id="about" className="py-16 md:py-24 bg-[#FCF4DB]">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-8">
                 <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
                   WHERE CHANGE BEGINS
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#32674D] mb-6">
                   A Transformational experience for future-ready leaders
                 </h2>
               </div>
-              <p className="text-lg text-muted-foreground text-center">
+              <p className="text-lg text-[#32674D] text-center">
                 Welcome to a unique journey designed to shake our thinking, spark inspiration, and strengthen the bonds within our Intercorp community. In India, we'll immerse ourselves in bold ideas, innovative business models, and real-world learning—fueling our culture of continuous growth. Together, we'll return ready to lead change and drive impact back home.
               </p>
             </div>
@@ -118,16 +118,16 @@ const Index = () => {
         </section>
 
         {/* Speakers Section */}
-        <section id="speakers" className="py-16 md:py-24 bg-gradient-to-b from-background to-muted">
+        <section id="speakers" className="py-16 md:py-24 bg-gradient-to-b from-[#32674D] to-[#32674D]/90 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
                 SPEAKERS
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Setting the Stage
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/90">
                 Meet the expert voices that will ground us in India's economic, cultural, and business landscape—preparing us to engage deeply and lead with purpose.
               </p>
             </div>
@@ -135,16 +135,16 @@ const Index = () => {
         </section>
 
         {/* Overview Section */}
-        <section id="overview" className="py-16 md:py-24 bg-background">
+        <section id="overview" className="py-16 md:py-24 bg-gradient-to-b from-background to-[#FCF4DB]">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
                 OVERVIEW
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#32674D] mb-6">
                 The Journey Ahead
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-[#32674D]">
                 A comprehensive exploration of India's business landscape, designed to inspire and transform our approach to leadership and innovation.
               </p>
             </div>
